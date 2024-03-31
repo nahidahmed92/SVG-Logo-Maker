@@ -1,11 +1,18 @@
-const CIRCLE = require('../lib/circle');
+const Circle = require('../lib/circle');
 
-describe('CIRCLE', () => {
+describe('Circle', () => {
   describe('INITIALIZATION', () => {
-    it('should be an instance of the CIRCLE', () => {
-      const circle = new CIRCLE();
+    it('should be an instance of the Circle', () => {
+      const circle = new Circle();
 
-      expect(circle).toBeInstanceOf(CIRCLE);
+      expect(circle).toBeInstanceOf(Circle);
+    });
+    it('should be an instance of Circle with the correct children assigned to the children string', () => {
+      const children = 'child';
+      const circle = new Circle(children);
+
+      expect(circle).toBeInstanceOf(Circle);
+      expect(circle.children).toEqual(children);
     });
   });
 });
